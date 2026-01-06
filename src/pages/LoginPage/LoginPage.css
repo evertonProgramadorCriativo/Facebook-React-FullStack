@@ -1,0 +1,193 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-secondary);
+  padding: var(--spacing-xl);
+}
+
+.login-container {
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Lado Esquerdo - Branding */
+.login-left {
+  flex: 1;
+}
+
+.login-logo {
+  font-size: 4rem;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+  font-weight: bold;
+  letter-spacing: -2px;
+}
+
+.login-tagline {
+  font-size: 1.75rem;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* Lado Direito - Formulário */
+.login-right {
+  flex: 1;
+  max-width: 400px;
+}
+
+.login-form {
+  background-color: var(--bg-primary);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md), var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.login-form input {
+  width: 100%;
+  padding: var(--spacing-md);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.login-form input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.1);
+}
+
+.login-form input::placeholder {
+  color: var(--text-tertiary);
+}
+
+.login-btn {
+  width: 100%;
+  padding: var(--spacing-md);
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.login-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+.login-btn:active {
+  transform: scale(0.98);
+}
+
+.forgot-password {
+  text-align: center;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: text-decoration 0.2s;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--border-color);
+  margin: var(--spacing-sm) 0;
+}
+
+.create-account-btn {
+  padding: var(--spacing-md) var(--spacing-xl);
+  background-color: var(--success-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: center;
+  transition: background-color 0.2s;
+}
+
+.create-account-btn:hover {
+  background-color: var(--success-hover);
+}
+
+.create-account-btn:active {
+  transform: scale(0.98);
+}
+
+.create-page {
+  text-align: center;
+  margin-top: var(--spacing-lg);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.create-page strong {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.create-page strong:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    gap: var(--spacing-xl);
+  }
+
+  .login-left {
+    text-align: center;
+  }
+
+  .login-logo {
+    font-size: 3rem;
+  }
+
+  .login-tagline {
+    font-size: 1.5rem;
+  }
+
+  .login-right {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-page {
+    padding: var(--spacing-md);
+  }
+
+  .login-logo {
+    font-size: 2.5rem;
+  }
+
+  .login-tagline {
+    font-size: 1.25rem;
+  }
+
+  .login-form {
+    padding: var(--spacing-md);
+  }
+
+  .login-btn,
+  .create-account-btn {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,126 @@
+/* Desktop (padrão) - 1920px e acima */
+.main-container {
+  display: flex;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: var(--spacing-md);
+  gap: var(--spacing-md);
+  min-height: calc(100vh - var(--header-height));
+}
+
+/* Laptop - até 1024px */
+@media (max-width: 1024px) {
+  .main-container {
+    gap: var(--spacing-sm);
+  }
+  
+  /* Oculta widgets em laptop */
+  .widgets {
+    display: none;
+  }
+  
+  /* Feed ocupa mais espaço */
+  .feed {
+    max-width: 100%;
+  }
+}
+
+/* Tablet - até 768px */
+@media (max-width: 768px) {
+  .main-container {
+    padding: var(--spacing-sm);
+  }
+  
+  /* Oculta sidebar em tablet */
+  .sidebar {
+    display: none;
+  }
+  
+  /* Feed ocupa toda largura */
+  .feed {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  /* Ajusta header */
+  .header-center {
+    display: none;
+  }
+}
+
+/* Mobile - até 480px */
+@media (max-width: 480px) {
+  .main-container {
+    padding: var(--spacing-xs);
+  }
+  
+  /* Remove padding lateral em cards */
+  .create-post,
+  .post {
+    border-radius: 0;
+    margin-left: calc(var(--spacing-xs) * -1);
+    margin-right: calc(var(--spacing-xs) * -1);
+  }
+  
+  /* Ajusta tamanhos de fonte */
+  body {
+    font-size: 14px;
+  }
+  
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.25rem; }
+  h3 { font-size: 1.1rem; }
+}
+
+/* Utilitários Responsivos */
+.hide-mobile {
+  display: block;
+}
+
+.show-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none;
+  }
+  
+  .show-mobile {
+    display: block;
+  }
+}
+
+/* Grid Responsivo */
+.responsive-grid {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+/* 4 colunas em desktop */
+@media (min-width: 1025px) {
+  .responsive-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* 3 colunas em laptop */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .responsive-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 2 colunas em tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+  .responsive-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 1 coluna em mobile */
+@media (max-width: 480px) {
+  .responsive-grid {
+    grid-template-columns: 1fr;
+  }
+}
