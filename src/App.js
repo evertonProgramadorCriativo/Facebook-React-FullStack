@@ -8,6 +8,7 @@ import {
 import './App.css';
 import Header from './components/Header/Header';
 import Sidebar from './components/Sidebar/Sidebar';
+import Widgets from './components/Widgets/Widgets';
 // Context
 import { AuthProvider } from './context/AuthContext';
 
@@ -24,6 +25,7 @@ function App() {
         <div className="app">
           <Header />
           <Sidebar />
+          <Widgets />
           <Routes>
             {/* Rota Pública - Login */}
             <Route path="/login" element={<LoginPage />} />
