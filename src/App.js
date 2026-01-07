@@ -6,7 +6,7 @@ import {
   Navigate
 } from 'react-router-dom';
 import './App.css';
-
+import Header from './components/Header/Header';
 // Context
 import { AuthProvider } from './context/AuthContext';
 
@@ -21,6 +21,7 @@ function App() {
     <BrowserRouter>
       <AuthProvider>
         <div className="app">
+          <Header />
           <Routes>
             {/* Rota Pública - Login */}
             <Route path="/login" element={<LoginPage />} />

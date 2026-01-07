@@ -116,7 +116,7 @@ const LoginPage = () => {
               className="create-account-btn"
               onClick={handleQuickLogin}
             >
-              Login Rápido (Demo)
+              Login Rápido
             </button>
           </form>
           
