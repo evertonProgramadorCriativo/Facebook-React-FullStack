@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
+import Sidebar from './components/Sidebar/Sidebar';
 // Context
 import { AuthProvider } from './context/AuthContext';
 
@@ -22,6 +23,7 @@ function App() {
       <AuthProvider>
         <div className="app">
           <Header />
+          <Sidebar />
           <Routes>
             {/* Rota Pública - Login */}
             <Route path="/login" element={<LoginPage />} />
