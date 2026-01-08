@@ -5,6 +5,7 @@
   margin: 0 auto;
   padding: var(--spacing-md);
   gap: var(--spacing-md);
+  background-color: #cccccc34;
   min-height: calc(100vh - var(--header-height));
 }
 

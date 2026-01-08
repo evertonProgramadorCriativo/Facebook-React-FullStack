@@ -1,14 +1,7 @@
 import React from 'react';
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Navigate
-} from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
-import Header from './components/Header/Header';
-import Sidebar from './components/Sidebar/Sidebar';
-import Widgets from './components/Widgets/Widgets';
+
 // Context
 import { AuthProvider } from './context/AuthContext';
 
@@ -17,31 +10,52 @@ import ProtectedRoute from './routes/ProtectedRoute';
 
 // Pages
 import LoginPage from './pages/LoginPage/LoginPage';
+import HomePage from './pages/HomePage/HomePage';
 
 function App() {
   return (
     <BrowserRouter>
       <AuthProvider>
         <div className="app">
-          <Header />
-          <Sidebar />
-          <Widgets />
           <Routes>
             {/* Rota Pública - Login */}
             <Route path="/login" element={<LoginPage />} />
-
-            {/* Rota Protegida - Home (temporária) */}
+            
+            {/* Rota Protegida - Home */}
             <Route path="/" element={
               <ProtectedRoute>
-                <div style={{
-                  padding: '2rem',
-                  textAlign: 'center',
-                  color: 'var(--text-primary)'
-                }}>
-                  <h1> Facebook React Js </h1>
-                  <p>HomePage será criada </p>
-                  <p>http://localhost:3000/login Pagína de Loginho</p>
-                </div>
+                <HomePage />
+              </ProtectedRoute>
+            } />
+
+            {/* Rotas futuras (temporariamente redirecionam para home) */}
+            <Route path="/profile" element={
+              <ProtectedRoute>
+                <HomePage />
+              </ProtectedRoute>
+            } />
+            
+            <Route path="/friends" element={
+              <ProtectedRoute>
+                <HomePage />
+              </ProtectedRoute>
+            } />
+            
+            <Route path="/watch" element={
+              <ProtectedRoute>
+                <HomePage />
+              </ProtectedRoute>
+            } />
+            
+            <Route path="/marketplace" element={
+              <ProtectedRoute>
+                <HomePage />
+              </ProtectedRoute>
+            } />
+            
+            <Route path="/groups" element={
+              <ProtectedRoute>
+                <HomePage />
               </ProtectedRoute>
             } />
 

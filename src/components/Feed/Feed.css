@@ -1,0 +1,14 @@
+.feed {
+  flex: 1;
+  max-width: var(--feed-max-width);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .feed {
+    max-width: 100%;
+  }
+}

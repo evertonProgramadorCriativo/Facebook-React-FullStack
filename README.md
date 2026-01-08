@@ -2,7 +2,9 @@
 
  ### Descrição
 
-Sistema de autenticação inspirado no Facebook, construído com React.js e React Router. Este projeto implementa um fluxo completo de autenticação com persistência de sessão, roteamento protegido e interface de login estilizada.
+
+## Desenvolvi uma Plataforma Social de Notícias com React.js e Context API
+
 
 ### Funcionalidades
 
@@ -17,7 +19,7 @@ Sistema de autenticação inspirado no Facebook, construído com React.js e Reac
  Design responsivo e visual inspirado no Facebook
 
 
-
+![Home Page Imagem](https://i.ibb.co/8Lv9HbV9/Screenshot-50.png)
 ### Tecnologias
 
 React.js - Biblioteca principal
@@ -40,3 +42,4 @@ npm start
 
 # Acessar no navegador
 http://localhost:3000/login
+http://localhost:3000
