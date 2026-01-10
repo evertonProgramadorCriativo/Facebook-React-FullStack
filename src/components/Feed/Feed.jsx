@@ -1,11 +1,15 @@
 import React from 'react';
 import './Feed.css';
+import Stories from '../Stories/Stories';
 import CreatePost from '../Post/CreatePost';
 import Post from '../Post/Post';
 
 const Feed = ({ user, posts }) => {
   return (
     <div className="feed">
+      {/* Stories */}
+      <Stories user={user} />
+      
       {/* Componente para criar novo post */}
       <CreatePost user={user} />
       

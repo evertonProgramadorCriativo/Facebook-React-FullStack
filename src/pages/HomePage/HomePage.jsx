@@ -5,6 +5,7 @@ import Sidebar from '../../components/Sidebar/Sidebar';
 import Feed from '../../components/Feed/Feed';
 import Widgets from '../../components/Widgets/Widgets';
 
+
 const HomePage = () => {
   const { user } = useAuth();
 
@@ -57,6 +58,7 @@ const HomePage = () => {
         <Widgets />
       </div>
     </>
+    
   );
 };
 
